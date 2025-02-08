@@ -13,5 +13,9 @@ public class LinkedList1 {
         linkedList.get(2); //O(n)
         linkedList.addLast(7); //O(1)
         linkedList.addFirst(0); //O(1)
+        linkedList.getLast();
+        System.out.println(linkedList);
+        linkedList.removeIf(x->x%2==0);
+        System.out.println(linkedList);
     }
 }
