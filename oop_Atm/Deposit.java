@@ -1,9 +1,17 @@
 
 class Deposit extends Transaction {
 
-    double amount;
+   private  double amount;
 
-    int getAmount() {
+    public Deposit() {
+    }
+
+    public Deposit(double amount) {
+        this.amount = amount;
+    }
+
+   private  int getAmount() {
         return (int) amount;
     }
+    
 }
