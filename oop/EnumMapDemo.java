@@ -1,6 +1,5 @@
 
 import java.util.EnumMap;
-import java.util.HashMap;
 import java.util.Map;
 
 public class EnumMapDemo {
