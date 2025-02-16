@@ -1,6 +1,8 @@
 
 class A{
 
+    static boolean x;
+
     private void print() {
 
         System.out.println("a");
