@@ -35,3 +35,49 @@ The Queue Interface Hierarchy
 
 ## Design Consideration
 - The implementation must decide how to handle full or empty queue scenarios.
+
+  ### Modeling FIFO Queues with Queue
+- **Queue Interface:** Provides two ways to handle corner cases—throwing an exception or returning a special value.
+- **Key Queue Methods:**
+  - `add(element)`: Throws `IllegalStateException` if full.
+  - `offer(element)`: Returns `false` if full.
+  - `remove()`: Throws `NoSuchElementException` if empty.
+  - `poll()`: Returns `false` if empty.
+  - `element()`: Throws `NoSuchElementException` if empty.
+  - `peek()`: Returns `null` if empty.
+
+### Modeling LIFO Stacks and FIFO Queues with Deque
+- **Deque Interface (Java SE 6):** Extends `Queue` and introduces a new naming convention.
+- **FIFO Methods in Deque:**
+  - `addLast(element)`: Throws `IllegalStateException` if full.
+  - `offerLast(element)`: Returns `false` if full.
+  - `removeFirst()`: Throws `NoSuchElementException` if empty.
+  - `pollFirst()`: Returns `null` if empty.
+  - `getFirst()`: Throws `NoSuchElementException` if empty.
+  - `peekFirst()`: Returns `null` if empty.
+- **LIFO Methods in Deque:**
+  - `addFirst(element)`: Throws `IllegalStateException` if full.
+  - `offerFirst(element)`: Returns `false` if full.
+  - `removeFirst() (pop)`: Throws `NoSuchElementException` if empty.
+  - `pollFirst()`: Returns `null` if empty.
+  - `getFirst()`: Throws `NoSuchElementException` if empty.
+  - `peekFirst()`: Returns `null` if empty.
+
+### Deque Naming Convention
+- `getFirst()` and `getLast()` in Deque correspond to `element()` in Queue.
+- **Additional Methods in Deque:**
+  - `push(element)`: Adds element to the head.
+  - `pop()`: Removes and returns the head element.
+  - `poll()`: Removes and returns the tail element.
+  - `peek()`: Shows the tail element (returns `null` if empty).
+
+### Implementing Queue and Deque
+- **Java Collections Framework Implementations:**
+  1. **ArrayDeque**: Implements both Queue and Deque, backed by an array with dynamic resizing.
+  2. **LinkedList**: Implements both Queue and Deque, backed by a linked list for efficient first/last element access.
+  3. **PriorityQueue**: Implements only Queue, keeps elements sorted by natural order or a custom comparator.
+
+### Avoiding the Stack Class
+- **Stack is an extension of Vector, which is discouraged** due to outdated design.
+- **Alternative:** Use `Deque` (e.g., `ArrayDeque`) instead.
+- **For thread-safe stacks:** Consider `BlockingQueue` implementations.
