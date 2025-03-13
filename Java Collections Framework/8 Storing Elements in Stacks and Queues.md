@@ -15,3 +15,23 @@ The Queue Interface Hierarchy
 ### Reasons for Their Success:
 1. **Simplicity** – Easy to implement, even in early computing.
 2. **Usefulness** – Widely used in algorithms, especially stacks.
+3. 
+ # Modeling Queues and Stacks
+
+## Interfaces for Queues and Stacks
+- The **Queue** interface models a queue.  
+- The **Deque** (double-ended queue) interface allows operations on both ends, making it act as both a queue and a stack.  
+
+## Operations on Deque
+- You can **push, pop, poll, and peek** elements from both the head and tail.  
+
+## Usage in Concurrent Programming
+- Stacks and queues are widely used in concurrent programming.  
+- Additional interfaces (**BlockingQueue, BlockingDeque, TransferQueue**) extend these, combining collections with concurrency handling.  
+
+## Handling Corner Cases
+- A queue may be **full** and unable to accept more elements.  
+- A queue may be **empty**, preventing pop, poll, or peek operations.  
+
+## Design Consideration
+- The implementation must decide how to handle full or empty queue scenarios.
