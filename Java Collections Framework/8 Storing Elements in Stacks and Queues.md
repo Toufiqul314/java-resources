@@ -4,7 +4,7 @@ Java SE 5 saw the addition of a new interface in the Collections Framework: the 
 The Queue Interface Hierarchy
 The Queue Interface Hierarchy
 
-*Pushing, Popping and Peeking
+###Pushing, Popping and Peeking
 - **Stack (LIFO - Last In, First Out)**
 - **Queue (FIFO - First In, First Out)**
 ### Main Operations:
