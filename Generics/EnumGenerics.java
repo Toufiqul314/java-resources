@@ -13,7 +13,7 @@ enum Opration {
                 return a.doubleValue() * b.doubleValue();
             case DIVIDE:
                 return a.doubleValue() / b.doubleValue();
-
+ 
             default:
                 throw new AssertionError("Unknown Opration:" + this);
         }
