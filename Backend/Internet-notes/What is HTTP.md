@@ -57,25 +57,25 @@
    GET /index.html HTTP/1.1
    Host: www.example.com
 
-##2 Response (200 OK):
+### ** Response (200 OK):
 #HTTP
 HTTP/1.1 200 OK
 Content-Type: text/html
 <html><body><h1>Welcome!</h1></body></html>
 
-##HTTP/2 and HTTPS:
+### **HTTP/2 and HTTPS:
 HTTP/2: Enhances performance with multiplexing and header compression.
 
 HTTPS: Secure version of HTTP using SSL/TLS to encrypt data.
 
-##HTTP Headers:
+### **HTTP Headers:
 Content-Type: Specifies media type (e.g., text/html, application/json).
 
 User-Agent: Identifies the client making the request.
 
 Authorization: Contains credentials (e.g., Bearer token).
 
-##Key Takeaways:
+### **Key Takeaways:
 HTTP is the foundation of web communication.
 
 It operates on a request-response model.
